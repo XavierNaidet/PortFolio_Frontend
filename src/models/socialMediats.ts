@@ -1,3 +1,10 @@
+export type SocialMediaLinkProps = {
+  name: string;
+  href: string;
+  icon: string; // Path to the icon
+  colorClass?: string; // Tailwind color classes
+};
+
 export const socialMediaLinks = [
   {
     name: "GitHub",

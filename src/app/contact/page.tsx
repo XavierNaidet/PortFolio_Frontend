@@ -1,6 +1,5 @@
 import React from "react";
-import SocialMediaLink from "@/app/components/SocialMediaLink";
-
+import { SocialMediaLink } from "@/app/components";
 import { socialMediaLinks } from "@/models";
 
 export default function ContactPage() {

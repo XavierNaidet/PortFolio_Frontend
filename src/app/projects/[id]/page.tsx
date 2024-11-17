@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation"; // Pour gérer les erreurs 404
 import Image from "next/image";
 
-import { projects } from "@/models";
-
-interface ProjectDetailsProps {
-  params: { id: string }; // Paramètre d'URL (id ou slug du projet)
-}
+import { projects, ProjectDetailsProps } from "@/models";
 
 export default function ProjectDetails({ params }: ProjectDetailsProps) {
   const project = projects.find((proj) => proj.id === params.id);

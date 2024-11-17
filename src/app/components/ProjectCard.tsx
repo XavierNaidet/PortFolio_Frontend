@@ -4,12 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-interface ProjectCardProps {
-  id: string; // ID ou slug unique du projet
-  imageSrc: string;
-  projectName: string;
-  technologies: { name: string; icon: string }[];
-}
+import { ProjectCardProps } from "@/models";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageSrc, projectName, technologies }) => {
   const router = useRouter();
@@ -46,4 +41,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageSrc, projectName, te
   );
 };
 
-export default ProjectCard;
+export { ProjectCard };

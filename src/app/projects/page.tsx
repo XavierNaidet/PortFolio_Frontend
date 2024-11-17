@@ -1,4 +1,4 @@
-import ProjectCard from "@/app/components/ProjectCard";
+import { ProjectCard } from "@/app/components";
 import { projects } from "@/models";
 
 export default function ProjectsPage() {

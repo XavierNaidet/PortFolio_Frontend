@@ -1,12 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { SocialMediaLinkProps } from "@/models";
 
-type SocialMediaLinkProps = {
-  name: string;
-  href: string;
-  icon: string; // Path to the icon
-  colorClass?: string; // Tailwind color classes
-};
 
 const SocialMediaLink: React.FC<SocialMediaLinkProps> = ({ name, href, icon, colorClass }) => {
   return (
@@ -22,4 +17,4 @@ const SocialMediaLink: React.FC<SocialMediaLinkProps> = ({ name, href, icon, col
   );
 };
 
-export default SocialMediaLink;
+export { SocialMediaLink };
