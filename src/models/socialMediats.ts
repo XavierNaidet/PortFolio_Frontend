@@ -5,17 +5,17 @@ export type SocialMediaLinkProps = {
   colorClass?: string; // Tailwind color classes
 };
 
-export const socialMediaLinks = [
+export const socialMediaLinks : SocialMediaLinkProps[] = [
   {
     name: "GitHub",
     href: "https://github.com/ton-profil",
-    icon: "/icons/github.svg",
+    icon: "/logos/github.svg",
     colorClass: "hover:text-gray-700",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/ton-profil",
-    icon: "/icons/linkedin.svg",
+    icon: "/logos/linkedin.svg",
     colorClass: "hover:text-blue-700",
   },
 ];

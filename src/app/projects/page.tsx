@@ -9,7 +9,7 @@ export default function ProjectsPage() {
         <ProjectCard
           key={index}
           id={project.id}
-          imageSrc={project.imageSrc}
+          images={project.images}
           projectName={project.projectName}
           technologies={project.technologies}
         />

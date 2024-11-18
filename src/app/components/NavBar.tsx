@@ -1,28 +1,37 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="bg-gray-900 text-white px-6 py-4">
+    <nav className="bg-gray-900 text-white px-6 py-1">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold">
-          <Link href="/">MonPortfolio</Link>
+        <div className="text-xl font-bold">
+          <Link href="/">
+            <Image
+              src="/wolfLogo.png"
+              alt="Logo"
+              width={600}
+              height={700}
+              className="cursor-pointer h-24 w-auto"
+            />
+          </Link>
         </div>
 
         {/* Navigation Links */}
         <div className="space-x-6">
           <Link href="/" className="hover:text-gray-300">
-            Présentation
+            {"<Présentation>"}
           </Link>
           <Link href="/skills" className="hover:text-gray-300">
-            Compétences
+            {"<Compétences>"}
           </Link>
           <Link href="/projects" className="hover:text-gray-300">
-            Projets
+            {"<Projets>"}
           </Link>
           <Link href="/contact" className="hover:text-gray-300">
-            Contact
+            {"<Contact>"}
           </Link>
         </div>
       </div>

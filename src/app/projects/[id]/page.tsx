@@ -1,7 +1,12 @@
 import { notFound } from "next/navigation"; // Pour gérer les erreurs 404
 import Image from "next/image";
 
-import { projects, ProjectDetailsProps } from "@/models";
+import { projects } from "@/models";
+
+
+interface ProjectDetailsProps {
+  params: { id: string }; // Paramètre d'URL (id ou slug du projet)
+}
 
 export default function ProjectDetails({ params }: ProjectDetailsProps) {
   const project = projects.find((proj) => proj.id === params.id);
@@ -15,7 +20,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
       <div className="bg-white rounded-lg shadow-md p-6">
         {/* Image */}
         <div className="relative w-full h-64">
-          <Image src={project.imageSrc} alt={project.projectName} layout="fill" objectFit="cover" />
+          <Image src={project.images[0]} alt={project.projectName} layout="fill" objectFit="cover" />
         </div>
 
         {/* Nom du projet */}
@@ -42,7 +47,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-blue-500 hover:underline"
           >
-            <Image src="/icons/github.svg" alt="GitHub" width={24} height={24} />
+            <Image src="/logos/github.svg" alt="GitHub" width={24} height={24} />
             <span>GitHub</span>
           </a>
 
@@ -54,7 +59,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-green-500 hover:underline"
             >
-              <Image src="/icons/external-link.svg" alt="Live Site" width={24} height={24} />
+              <Image src="/logos/external-link.svg" alt="Live Site" width={24} height={24} />
               <span>Voir le site</span>
             </a>
           )}

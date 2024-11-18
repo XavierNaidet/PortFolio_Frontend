@@ -4,9 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import { ProjectCardProps } from "@/models";
+interface ProjectCardProps {
+  id: string; // ID ou slug unique du projet
+  images: string[];
+  projectName: string;
+  technologies: { name: string; icon: string }[];
+}
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageSrc, projectName, technologies }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, images, projectName, technologies }) => {
   const router = useRouter();
 
   const handleCardClick = () => {
@@ -19,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageSrc, projectName, te
       onClick={handleCardClick}
     >
       <div className="relative w-full h-48">
-        <Image src={imageSrc} alt={projectName} layout="fill" objectFit="cover" />
+        <Image src={images[0]} alt={projectName} layout="fill" objectFit="cover" />
       </div>
       <div className="p-4">
         <h3 className="text-lg font-bold text-gray-800">{projectName}</h3>

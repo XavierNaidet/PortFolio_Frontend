@@ -1,14 +1,21 @@
 import React from "react";
-import { SkillCardProps } from "@/models";
+import Image from "next/image";
+import { Skill } from "@/models";
+
+interface SkillCardProps {
+  skill: Skill;
+}
 
 const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4 flex items-center space-x-4">
       {skill.icon && (
-        <img
+        <Image
           src={skill.icon}
           alt={skill.name}
-          className="w-12 h-12 object-contain"
+          width={48}
+          height={48}
+          className="object-contain"
         />
       )}
       <div className="flex-1">
