@@ -12,7 +12,7 @@ interface CarouselProps {
   projectName: string;
 }
 
-export default function Carousel({ images, projectName }: CarouselProps) {
+const Carousel: React.FC<CarouselProps> = ({ images, projectName }: CarouselProps) => {
   return (
     <Swiper
       modules={[EffectCoverflow, Pagination, Navigation]}
@@ -48,4 +48,6 @@ export default function Carousel({ images, projectName }: CarouselProps) {
       ))}
     </Swiper>
   );
-}
+};
+
+export { Carousel };

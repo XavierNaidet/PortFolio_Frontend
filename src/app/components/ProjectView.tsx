@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Carousel from "./Carousel";
+import { Carousel, Tooltip } from "@/app/components";
+
 
 import { Project } from "@/models/projects";
 
@@ -23,9 +24,16 @@ export default function ProjectView({ project }: ProjectViewProps) {
         {/* Technologies */}
         <div className="flex space-x-4 mt-4">
           {project.technologies.map((tech) => (
-            <div key={tech.name} className="flex items-center">
-              <Image src={tech.icon} alt={tech.name} width={32} height={32} />
-            </div>
+            <Tooltip key={tech.name} text={tech.name}>
+              {/* Logo */}
+              <Image 
+                src={tech.icon}
+                alt={tech.name}
+                width={32}
+                height={32}
+                aria-label={tech.name}
+              />
+            </Tooltip>
           ))}
         </div>
 
