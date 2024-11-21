@@ -1,6 +1,6 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -8,11 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 interface CarouselProps {
-  images: string[];
-  projectName: string;
+  children: React.ReactNode;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images, projectName }: CarouselProps) => {
+const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
   return (
     <Swiper
       modules={[EffectCoverflow, Pagination, Navigation]}
@@ -35,17 +34,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, projectName }: CarouselProp
         300: { spaceBetween: 0, slidesPerView: 1 },
       }}
     >
-      {images.map((image, index) => (
-        <SwiperSlide key={index}>
-          <img
-            src={image}
-            alt={`${projectName} image ${index + 1}`}
-            loading="lazy"
-            className="bg-center bg-cover flex justify-center items-center w-auto h-[300px] mr-0"
-          />
-          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </SwiperSlide>
-      ))}
+      {/* Insère les enfants (contenu dynamique) dans le carousel */}
+      {children}
     </Swiper>
   );
 };
