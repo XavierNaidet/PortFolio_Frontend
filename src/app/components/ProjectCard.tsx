@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Technologies } from "@/app/components";
 
 interface ProjectCardProps {
   id: string; // ID ou slug unique du projet
@@ -28,19 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, images, projectName, tech
       </div>
       <div className="p-4">
         <h3 className="text-lg font-bold text-gray-800">{projectName}</h3>
-        <div className="flex space-x-4 mt-2">
-          {technologies.map((tech) => (
-            <div key={tech.name} className="flex items-center">
-              <Image
-                src={tech.icon}
-                alt={tech.name}
-                width={24}
-                height={24}
-                className="inline-block"
-              />
-            </div>
-          ))}
-        </div>
+        <Technologies technologies={technologies} />
       </div>
     </div>
   );
