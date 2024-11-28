@@ -1,6 +1,7 @@
 "use client";
 
-import { Swiper } from "swiper/react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -8,10 +9,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 interface CarouselProps {
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[]; // Accepts single or multiple child components
 }
 
 const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
+  // Convert each child into a SwiperSlide
+  const slides = React.Children.map(children, (child) => (
+    <SwiperSlide>{child}</SwiperSlide>
+  ));
+  
   return (
     <Swiper
       modules={[EffectCoverflow, Pagination, Navigation]}
@@ -34,8 +40,8 @@ const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
         300: { spaceBetween: 0, slidesPerView: 1 },
       }}
     >
-      {/* Insère les enfants (contenu dynamique) dans le carousel */}
-      {children}
+      {/* Render dynamically wrapped slides */}
+      {slides}
     </Swiper>
   );
 };

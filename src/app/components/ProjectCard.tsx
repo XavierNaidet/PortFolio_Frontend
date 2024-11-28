@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, images, projectName, tech
       </div>
       <div className="p-4">
         <h3 className="text-lg font-bold text-gray-800">{projectName}</h3>
-        <Technologies technologies={technologies} />
+        <Technologies technologies={technologies} size={24} />
       </div>
     </div>
   );

@@ -2,10 +2,11 @@ import Image from "next/image";
 import { Tooltip } from "@/app/components"; // Importation du composant Tooltip
 
 interface TechnologiesProps {
-  technologies: { name: string; icon: string }[];
+  technologies: { name: string; icon: string }[],
+  size?: number;
 };
 
-const Technologies: React.FC<TechnologiesProps> = ({ technologies }: TechnologiesProps) => {
+const Technologies: React.FC<TechnologiesProps> = ({ technologies , size = 32 }) => {
   return (
     <div className="flex space-x-4 mt-4">
       {technologies.map((tech) => (
@@ -13,8 +14,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }: Technologie
           <Image
             src={tech.icon}
             alt={tech.name}
-            width={32}
-            height={32}
+            width={size}
+            height={size}
             aria-label={tech.name}
           />
         </Tooltip>
