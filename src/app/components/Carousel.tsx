@@ -15,29 +15,29 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
   // Convert each child into a SwiperSlide
   const slides = React.Children.map(children, (child) => (
-    <SwiperSlide>{child}</SwiperSlide>
+    <SwiperSlide>
+      {child}
+    </SwiperSlide>
   ));
   
   return (
     <Swiper
+      effect={'coverflow'}
+      centeredSlides={true}
       modules={[EffectCoverflow, Pagination, Navigation]}
       navigation={true}
       pagination={{ dynamicBullets: true }}
-      effect="coverflow"
-      centeredSlides={true}
       spaceBetween={0}
-      slidesPerView={4}
+      slidesPerView={1.2}
       coverflowEffect={{
         rotate: 45,
         stretch: 25,
         depth: 250,
         modifier: 1,
-        slideShadows: false,
+        slideShadows: true,
       }}
       breakpoints={{
-        700: { spaceBetween: 0, slidesPerView: 4 },
-        500: { spaceBetween: 100, slidesPerView: 2 },
-        300: { spaceBetween: 0, slidesPerView: 1 },
+        1024: { spaceBetween: 50, slidesPerView: 3, },
       }}
     >
       {/* Render dynamically wrapped slides */}

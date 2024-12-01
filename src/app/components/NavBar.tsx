@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="bg-gray-900 text-white px-6 py-1">
+    <nav className="bg-gray-900 text-white px-6 py-1 flex h-max">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl font-bold">

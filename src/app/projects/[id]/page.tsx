@@ -10,6 +10,10 @@ export default function Page({ params }: { params: { id: string } }) {
     notFound(); // Retourne une page 404 si le projet n'existe pas
   }
 
-  return <ProjectView project={project} />;
+  return (
+    <div className="h-full w-full">
+      <ProjectView project={project} />
+    </div>
+  );
 
 }

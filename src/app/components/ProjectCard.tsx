@@ -21,10 +21,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, images, projectName, tech
 
   return (
     <div
-      className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+      className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer h-full w-full"
       onClick={handleCardClick}
     >
-      <div className="relative w-full h-48">
+      <div className="relative w-full h-2/3">
         <Image src={images[0]} alt={projectName} layout="fill" objectFit="cover" />
       </div>
       <div className="p-4">

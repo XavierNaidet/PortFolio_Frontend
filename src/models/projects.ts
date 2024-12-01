@@ -18,7 +18,7 @@ export const projects: Project[] = [
     id: "super-project",
     projectName: "Mon Super Projet",
     description: "Un projet incroyable réalisé avec React, Next.js et Tailwind CSS.",
-    images: ["/images/project1/1.jpg", "/images/project1/2.jpg", "/images/project1/3.jpg"],
+    images: ["/images/project1/1.jpg", "/images/project1/3.jpg", "/images/project1/2.jpg"],
     technologies: [
       { name: "React", icon: "/logos/react.svg" },
       { name: "Next.js", icon: "/logos/nextjs.svg" },
