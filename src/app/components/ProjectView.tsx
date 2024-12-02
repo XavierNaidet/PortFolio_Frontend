@@ -49,7 +49,7 @@ export default function ProjectView({ project }: ProjectViewProps) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-blue-500 hover:underline"
             >
-              <Image src="/logos/github.svg" alt="GitHub" width={24} height={24} />
+              <Image src="/logos/black/github.svg" alt="GitHub" width={24} height={24} />
               <span>GitHub</span>
             </a>
 

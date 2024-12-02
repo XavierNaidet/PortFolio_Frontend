@@ -11,7 +11,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
     <div className="bg-white shadow-md rounded-lg p-4 flex items-center space-x-4">
       {skill.icon && (
         <Image
-          src={skill.icon}
+          src={`/logos/color/${skill.icon}`}
           alt={skill.name}
           width={48}
           height={48}
@@ -27,9 +27,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
               style={{ width: `${skill.level}%` }}
             ></div>
           </div>
-          <span className="text-sm text-gray-500 mt-1 block">
+          {/* <span className="text-sm text-gray-500 mt-1 block">
             {skill.level}%
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

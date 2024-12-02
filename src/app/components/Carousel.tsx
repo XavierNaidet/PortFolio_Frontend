@@ -39,6 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
       breakpoints={{
         1024: { spaceBetween: 50, slidesPerView: 3, },
       }}
+      className="h-full"
     >
       {/* Render dynamically wrapped slides */}
       {slides}

@@ -12,7 +12,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies , size = 32 })
       {technologies.map((tech) => (
         <Tooltip key={tech.name} text={tech.name}>
           <Image
-            src={tech.icon}
+            src={`/logos/black/${tech.icon}`}
             alt={tech.name}
             width={size}
             height={size}

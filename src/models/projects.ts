@@ -20,9 +20,9 @@ export const projects: Project[] = [
     description: "Un projet incroyable réalisé avec React, Next.js et Tailwind CSS.",
     images: ["/images/project1/1.jpg", "/images/project1/3.jpg", "/images/project1/2.jpg"],
     technologies: [
-      { name: "React", icon: "/logos/react.svg" },
-      { name: "Next.js", icon: "/logos/nextjs.svg" },
-      { name: "Tailwind CSS", icon: "/logos/tailwindcss.svg" },
+      { name: "React", icon: "react.svg" },
+      { name: "Next.js", icon: "nextjs.svg" },
+      { name: "Tailwind CSS", icon: "tailwindcss.svg" },
     ],
     githubLink: "https://github.com/mon-super-projet",
     liveSite: "https://mon-super-projet.com",
@@ -33,8 +33,8 @@ export const projects: Project[] = [
     description: "Un portfolio moderne avec TypeScript et CSS.",
     images: ["/images/project2.jpg"],
     technologies: [
-      { name: "TypeScript", icon: "/logos/typescript.svg" },
-      { name: "CSS", icon: "/logos/css.svg" },
+      { name: "TypeScript", icon: "typescript.svg" },
+      { name: "CSS", icon: "css.svg" },
     ],
     githubLink: "https://github.com/portfolio-modern",
     liveSite: "",
