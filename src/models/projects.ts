@@ -25,7 +25,7 @@ export const projects: Project[] = [
       { name: "php", icon: "php.svg" },
       { name: "MySQL", icon: "mysql.svg" },
     ],
-    githubLink: "https://github.com/mon-super-projet",
+    githubLink: "",
     liveSite: "",
   },
   {
