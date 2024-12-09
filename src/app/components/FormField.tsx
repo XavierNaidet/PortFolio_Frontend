@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 interface FormFieldProps {
+  id: string;
   type: "text" | "email" | "textarea";
   value: string;
   placeholder: string;
@@ -10,6 +11,7 @@ interface FormFieldProps {
 }
 
 const FormField: React.FC<FormFieldProps> = ({
+  id,
   type,
   value,
   placeholder,
@@ -20,6 +22,7 @@ const FormField: React.FC<FormFieldProps> = ({
     <div className="relative">
       {type === "textarea" ? (
         <textarea
+          id={id}
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
@@ -31,6 +34,8 @@ const FormField: React.FC<FormFieldProps> = ({
         />
       ) : (
         <input
+          id={id}
+          autoComplete={id}
           type={type}
           placeholder={placeholder}
           value={value}

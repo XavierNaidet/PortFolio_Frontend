@@ -4,7 +4,7 @@ import { projects } from "@/models";
 export default function ProjectsPage() {
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full min-h-[500px]">
       <Carousel>
         {projects.map((project) => (
             <ProjectCard

@@ -18,4 +18,10 @@ export const socialMediaLinks : SocialMediaLinkProps[] = [
     icon: "/logos/black/linkedin.svg",
     colorClass: "hover:text-blue-700",
   },
+  {
+    name: "Mail",
+    href: "mailto:x.naidet@gmail.com",
+    icon: "/logos/black/linkedin.svg",
+    colorClass: "hover:text-blue-700",
+  },
 ];

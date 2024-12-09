@@ -36,9 +36,9 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 flex flex-col md:flex-row items-center md:items-start justify-between space-y-6 md:space-y-0">
+    <div className="container w-full h-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between md:justify-center space-y-6 md:space-y-0">
       {/* Formulaire de contact */}
-      <div className="bg-white rounded-lg shadow-md p-6 w-full md:w-1/2">
+      <div className="bg-white rounded-lg shadow-md p-6 w-full lg:w-1/2">
         <h2 className="text-2xl font-bold mb-4">Contactez-moi</h2>
         <form action="#" method="POST">
           {/* Name Field */}
@@ -47,6 +47,7 @@ const ContactPage: React.FC = () => {
               Nom
             </label>
             <FormField
+              id = "name"
               type="text"
               placeholder="Nom"
               value={formData.name}
@@ -61,6 +62,7 @@ const ContactPage: React.FC = () => {
               Email
             </label>
             <FormField
+              id="email"
               type="email"
               placeholder="Email"
               value={formData.email}
@@ -75,6 +77,7 @@ const ContactPage: React.FC = () => {
               Message
             </label>
             <FormField
+              id="message"
               type="textarea"
               placeholder="Message"
               value={formData.message}
@@ -97,10 +100,10 @@ const ContactPage: React.FC = () => {
       </div>
 
       {/* Réseaux sociaux */}
-      <div className="flex flex-col items-center md:items-start space-y-6">
+      <div className="flex flex-col items-center md:items-start space-y-6 md:pl-8">
         {/* N'hésitez pas à me contacter, je suis à votre disposition pour plus d'informations. */}
         <h2 className="text-2xl font-bold">Suivez-moi</h2> 
-        <div className="flex space-x-6">
+        <div className="flex flex-col space-y-6">
           {socialMediaLinks.map((link) => (
             <SocialMediaLink
               key={link.name}
