@@ -8,13 +8,13 @@ export type SocialMediaLinkProps = {
 export const socialMediaLinks : SocialMediaLinkProps[] = [
   {
     name: "GitHub",
-    href: "https://github.com/ton-profil",
+    href: "https://github.com/XavierNaidet",
     icon: "/logos/black/github.svg",
     colorClass: "hover:text-gray-700",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/ton-profil",
+    href: "https://www.linkedin.com/in/xaviernaidet/",
     icon: "/logos/black/linkedin.svg",
     colorClass: "hover:text-blue-700",
   },
