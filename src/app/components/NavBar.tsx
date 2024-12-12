@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { NavLinks } from "@/app/components";
 
 const NavBar: React.FC = () => {
   return (
@@ -20,20 +21,7 @@ const NavBar: React.FC = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="space-x-6">
-          <Link href="/" className="hover:text-gray-300">
-            {"<Présentation>"}
-          </Link>
-          <Link href="/skills" className="hover:text-gray-300">
-            {"<Compétences>"}
-          </Link>
-          <Link href="/projects" className="hover:text-gray-300">
-            {"<Projets>"}
-          </Link>
-          <Link href="/contact" className="hover:text-gray-300">
-            {"<Contact>"}
-          </Link>
-        </div>
+        <NavLinks />
       </div>
     </nav>
   );
