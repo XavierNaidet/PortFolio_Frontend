@@ -3,6 +3,8 @@ export * from "@/app/components/ProjectCard";
 export * from "@/app/components/SkillCard";
 export * from "@/app/components/SocialMediaLink";
 export * from "@/app/components/FormField";
+export * from "@/app/components/FormContact";
+export * from "@/app/components/GenericForm";
 export * from "@/app/components/ProjectView";
 export * from "@/app/components/Carousel";
 export * from "@/app/components/Tooltip";

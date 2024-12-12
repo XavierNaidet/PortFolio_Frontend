@@ -28,7 +28,7 @@ const FormField: React.FC<FormFieldProps> = ({
           onChange={(e) => onChange(e.target.value)}
           className={`w-full px-4 py-2 mt-1 border rounded-lg ${
             !isValid ? "border-red-500" : "border-gray-300"
-          } focus:outline-none focus:ring ${
+          } focus:outline-none focus:ring-2 ${
             !isValid ? "focus:ring-red-500" : "focus:ring-blue-500"
           }`}
         />
@@ -42,7 +42,7 @@ const FormField: React.FC<FormFieldProps> = ({
           onChange={(e) => onChange(e.target.value)}
           className={`w-full px-4 py-2 mt-1 border rounded-lg ${
             !isValid ? "border-red-500" : "border-gray-300"
-          } focus:outline-none focus:ring ${
+          } focus:outline-none focus:ring-2 ${
             !isValid ? "focus:ring-red-500" : "focus:ring-blue-500"
           }`}
         />
@@ -52,13 +52,15 @@ const FormField: React.FC<FormFieldProps> = ({
           <Image
             src="/icons/cross.svg"
             alt="red cross"
-            className="w-5 h-5"
+            width={20}
+            height={20}
           />
         ) : value ? (
           <Image
             src="/icons/check.svg"
             alt="green check"
-            className="w-5 h-5"
+            width={20}
+            height={20}
           />
         ) : null}
       </span>

@@ -3,7 +3,7 @@ import { projects } from "@/models/projects";
 import ProjectView from "@/app/components/ProjectView";
 
 
-export default function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {

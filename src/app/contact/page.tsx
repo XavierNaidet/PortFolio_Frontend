@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { SocialMediaLink, FormField } from "@/app/components";
+import { SocialMediaLink, FormContact } from "@/app/components";
 import { socialMediaLinks } from "@/models";
 
 const ContactPage: React.FC = () => {
@@ -38,66 +38,7 @@ const ContactPage: React.FC = () => {
   return (
     <div className="container w-full h-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between md:justify-center space-y-6 md:space-y-0">
       {/* Formulaire de contact */}
-      <div className="bg-white rounded-lg shadow-md p-6 w-full lg:w-1/2">
-        <h2 className="text-2xl font-bold mb-4">Contactez-moi</h2>
-        <form action="#" method="POST">
-          {/* Name Field */}
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 font-medium">
-              Nom
-            </label>
-            <FormField
-              id = "name"
-              type="text"
-              placeholder="Nom"
-              value={formData.name}
-              isValid={!errors.name}
-              onChange={(value) => handleChange("name", value)}
-            />
-          </div>
-
-          {/* Email Field */}
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 font-medium">
-              Email
-            </label>
-            <FormField
-              id="email"
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              isValid={!errors.email}
-              onChange={(value) => handleChange("email", value)}
-            />
-          </div>
-
-          {/* Message Field */}
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700 font-medium">
-              Message
-            </label>
-            <FormField
-              id="message"
-              type="textarea"
-              placeholder="Message"
-              value={formData.message}
-              isValid={!errors.message}
-              onChange={(value) => handleChange("message", value)}
-            />
-          </div>
-
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
-          disabled={
-            errors.name || errors.email || errors.message || 
-            !formData.name || !formData.email || !formData.message
-          }
-        >
-          Envoyer
-        </button>
-        </form>
-      </div>
+      <FormContact />
 
       {/* Réseaux sociaux */}
       <div className="flex flex-col items-center md:items-start space-y-6 md:pl-8">
