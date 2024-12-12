@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React from "react";
 import { GenericForm } from "@/app/components";
@@ -25,7 +25,7 @@ const contactFields: FieldConfig[] = [
   },
 ];
 
-const FormContact: React.FC = () => {
+const ContactForm: React.FC = () => {
   const handleSubmit = (data: Record<string, string>) => {
     console.log("Form Data Submitted:", data);
   };
@@ -33,4 +33,4 @@ const FormContact: React.FC = () => {
   return <GenericForm title="Contactez-moi" fields={contactFields} onSubmit={handleSubmit} />;
 };
 
-export { FormContact };
+export { ContactForm };
