@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Protfolio - Xavier NAIDET",
-  description: "Le protfolio de Xavier NAIDET",
+  title: "Portfolio - Xavier NAIDET",
+  description: "Le portfolio de Xavier NAIDET",
 };
 
 export default function RootLayout({
