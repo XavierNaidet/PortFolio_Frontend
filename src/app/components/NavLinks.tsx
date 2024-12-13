@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { MenuIcon } from "@/app/components/icons";
+import { MenuIcon, CrossIcon } from "@/app/components/icons";
 
 const NavLinks: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -20,43 +19,39 @@ const NavLinks: React.FC = () => {
   ];
 
   return (
-    <>
+    <div className="relative group">
       {/* Hamburger menu for small screens */}
       <div className="sm:hidden">
         <button
           onClick={toggleDrawer}
-          className="text-white focus:outline-none focus:ring-2 focus:ring-gray-300"
+          className="text-white "
         >
-          <MenuIcon className="text-white" />
+          {isDrawerOpen?
+            <CrossIcon className="text-white" />
+            :<MenuIcon className="text-white" />
+          }
         </button>
       </div>
 
       {/* Drawer */}
       {isDrawerOpen && (
         <div
-          className="fixed top-0 right-0 w-3/4 h-full bg-gray-800 text-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out"
-        >
-          <div className="flex justify-between items-center px-6 py-4">
+        className={`absolute right-0 top-full mt-2 w-48 bg-gray-800 text-white shadow-lg z-50 rounded-md overflow-hidden transform transition-all duration-1000 ${
+          isDrawerOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
+        }`}
+      >
+          <div className="flex flex-col items-center space-y-4 my-4 px-6">
             <span className="text-lg font-bold">Menu</span>
-            <button
-              onClick={toggleDrawer}
-              className="text-white focus:outline-none focus:ring-2 focus:ring-gray-300"
-            >
-              <Image
-                src="/icons/cross.svg"
-                alt="Close"
-                width={24}
-                height={24}
-                className="h-8 w-8"
-              />
-            </button>
-          </div>
-          <div className="flex flex-col items-end space-y-4 px-6">
-          {links.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-gray-300">
-              {link.label}
-            </Link>
-          ))}
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={toggleDrawer}
+                className="hover:text-gray-300"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
@@ -69,7 +64,7 @@ const NavLinks: React.FC = () => {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
