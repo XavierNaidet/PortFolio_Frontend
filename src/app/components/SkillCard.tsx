@@ -14,7 +14,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
           src={`/logos/color/${skill.icon}`}
           alt={skill.name}
           width={48}
-          height={48}          
+          height={48}
           className="object-contain"
         />
       )}
