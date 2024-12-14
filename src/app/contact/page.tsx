@@ -1,6 +1,6 @@
 import React from "react";
-import { SocialMediaLink, ContactForm } from "@/app/components";
-import { socialMediaLinks } from "@/models";
+import { MediaLink, ContactForm } from "@/app/components";
+import { mediaLinks } from "@/models";
 
 const ContactPage: React.FC = () => {
   return (
@@ -10,10 +10,10 @@ const ContactPage: React.FC = () => {
 
       {/* Réseaux sociaux */}
       <div className="flex flex-col items-center md:items-start space-y-6 md:pl-8">
-        <h2 className="text-2xl font-bold">Suivez-moi</h2> 
+        <h2 className="text-2xl font-bold">Retrouvez-moi</h2> 
         <div className="flex md:flex-col space-x-6 md:space-x-0 md:space-y-6">
-          {socialMediaLinks.map((link) => (
-            <SocialMediaLink
+          {mediaLinks.map((link) => (
+            <MediaLink
               key={link.name}
               name={link.name}
               href={link.href}

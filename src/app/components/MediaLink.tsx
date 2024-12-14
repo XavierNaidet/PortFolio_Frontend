@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { SocialMediaLinkProps } from "@/models";
+import { MediaLinkProps } from "@/models";
 
 
-const SocialMediaLink: React.FC<SocialMediaLinkProps> = ({ name, href, icon, colorClass }) => {
+const MediaLink: React.FC<MediaLinkProps> = ({ name, href, icon, colorClass }) => {
   return (
     <a
       href={href}
@@ -17,4 +17,4 @@ const SocialMediaLink: React.FC<SocialMediaLinkProps> = ({ name, href, icon, col
   );
 };
 
-export { SocialMediaLink };
+export { MediaLink };
