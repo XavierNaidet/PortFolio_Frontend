@@ -4,7 +4,7 @@ import { mediaLinks } from "@/models";
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="container w-full h-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between md:justify-center space-y-6 md:space-y-0">
+    <div className="container w-full h-auto  mb-4 mx-auto flex flex-col md:flex-row items-center md:items-start justify-between md:justify-center space-y-6 md:space-y-0">
       {/* Formulaire de contact */}
       <ContactForm />
 

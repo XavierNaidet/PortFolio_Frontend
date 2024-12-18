@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import AboutPage from './about/page';
 import SkillsPage from './skills/page';
+import ProjectsPage from './projects/page';
+import ContactPage from './contact/page';
 
 const HomePage: React.FC = () => {
   return (
@@ -47,6 +49,8 @@ const HomePage: React.FC = () => {
       </div>
       <AboutPage/>
       <SkillsPage/>
+      <ProjectsPage/>
+      <ContactPage/>
     </div>
   );
 };
