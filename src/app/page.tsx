@@ -37,7 +37,6 @@ const HomePage: React.FC = () => {
           </div>
         </header>
 
-        
         {/* Footer Section */}
         <footer className="text-center mt-12">
           <p className="text-gray-600 mt-4">
@@ -45,12 +44,12 @@ const HomePage: React.FC = () => {
           </p>
         </footer>
 
-        
       </div>
       <AboutPage/>
       <SkillsPage/>
       <ProjectsPage/>
       <ContactPage/>
+      <div className='h-2'></div>
     </div>
   );
 };
