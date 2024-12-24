@@ -11,7 +11,7 @@ export default {
       colors: {
         primary: "#336D85", // Bleu pétrole
         secondary: "#5C9EAD", // Bleu clair doux
-        tertiary: "#F3A712", // Jaune ocre
+        tertiary: "#0C253A", // Jaune ocre
         error: '#D72638',
         neutral: {
           DEFAULT: "#F4F8FB", // Blanc cassé

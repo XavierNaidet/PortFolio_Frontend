@@ -22,14 +22,14 @@ const HomePage: React.FC = () => {
               height={150}
               className="rounded-full bg-primary shadow-lg"
             />
-            <p className="text-xl font-semibold text-secondary mt-4">
+            <p className="text-xl font-semibold text-tertiary mt-4">
               Xavier
             </p>
           </div>
 
           {/* Title */}
           <div className="text-center lg:text-left lg:flex lg:flex-col lg:justify-center">
-            <h1 className="text-4xl font-bold text-secondary leading-snug">
+            <h1 className="text-4xl font-bold text-primary leading-snug">
               Développeur Web / Web Mobile<br />
               <span className="text-tertiary">&</span> <br />
               Créateur de Solutions Modernes
