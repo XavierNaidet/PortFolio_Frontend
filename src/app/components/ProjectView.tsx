@@ -11,7 +11,7 @@ interface ProjectViewProps {
 
 export default function ProjectView({ project }: ProjectViewProps) {
   return (
-    <div className="max-h-full min-h-[550px] max-w-full bg-white rounded-lg shadow-md p-6 mb-6">
+    <div className="max-h-full min-h-[550px] max-w-full bg-neutral-variant text-neutral rounded-lg shadow-lg p-6 mb-6">
       {/* Images Carrousel */}
       <Carousel>
         {project.images.map((image, index) => (
@@ -30,26 +30,26 @@ export default function ProjectView({ project }: ProjectViewProps) {
         ))}
       </Carousel>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-4">
         {/* Nom du projet */}
-        <h1 className="text-2xl font-bold mt-4">{project.projectName}</h1>
+        <h1 className="text-2xl font-bold text-primary">{project.projectName}</h1>
 
         {/* Description */}
-        <p className="mt-4 text-gray-700">{project.description}</p>
+        <p className="mt-4 text-secondary">{project.description}</p>
         
         {/* Technologies */}
         <Technologies technologies={project.technologies}/>
 
         {/* Liens */}
         {(project.githubLink || project.liveSite) && (
-          <div className="flex space-x-6 mt-4">
+          <div className="flex space-x-4 mt-4">
             {/* Lien GitHub */}
             {project.githubLink && (
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-blue-500 hover:underline"
+                className="flex items-center space-x-1 text-secondary hover:text-tertiary hover:bg-primary rounded-md p-2"
               >
                 <Image src="/logos/black/github.svg" alt="GitHub" width={24} height={24} />
                 <span>GitHub</span>
@@ -62,7 +62,7 @@ export default function ProjectView({ project }: ProjectViewProps) {
                 href={project.liveSite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-green-500 hover:underline"
+                className="flex items-center space-x-1 text-secondary hover:text-tertiary hover:bg-primary rounded-md p-2"
               >
                 <Image src="/globe.svg" alt="Live Site" width={24} height={24} />
                 <span>Voir le site</span>

@@ -15,11 +15,10 @@ const NavLinks: React.FC = () => {
       <div className="sm:hidden">
         <button
           onClick={toggleDrawer}
-          className="text-white "
         >
           {isDrawerOpen?
-            <CrossIcon className="text-white" />
-            :<MenuIcon className="text-white" />
+            <CrossIcon className="text-tertiary" />
+            :<MenuIcon className="text-tertiary" />
           }
         </button>
       </div>
@@ -27,18 +26,22 @@ const NavLinks: React.FC = () => {
       {/* Drawer */}
       <div
         ref={drawerRef}
-        className={`absolute right-0 top-full mt-2 w-48 bg-gray-800 text-white shadow-lg z-50 rounded-md overflow-hidden transform transition-all duration-300 ${
-          isDrawerOpen ? "translate-y-2 opacity-100 pointer-events-auto" : "translate-y-[-10px] opacity-0 pointer-events-none"
-        }`}
+        className={`
+          absolute right-0 top-full mt-2 w-48 bg-primary text-neutral-variant border-secondary border shadow-lg z-50 rounded-md overflow-hidden transform transition-all duration-300
+          ${isDrawerOpen 
+            ? "translate-y-2 opacity-100 pointer-events-auto"
+            : "translate-y-[-10px] opacity-0 pointer-events-none"
+          }
+        `}
       >
-        <div className="flex flex-col items-center space-y-4 my-4 px-6">
-          <span className="text-lg font-bold">Menu</span>
+        <div className="flex flex-col items-center space-y-2 my-4 px-6">
+          <span className="text-lg font-bold text-secondary">Menu</span>
           {navigationLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={toggleDrawer}
-              className="hover:text-gray-300"
+              className="hover:bg-secondary hover:text-primary rounded-md p-2 text-neutral"
             >
               {link.label}
             </Link>
@@ -47,9 +50,9 @@ const NavLinks: React.FC = () => {
       </div>
 
       {/* Navigation links for larger screens */}
-      <div className="hidden sm:flex space-x-6">
+      <div className="hidden sm:flex space-x-4">
         {navigationLinks.map((link) => (
-          <Link key={link.href} href={link.href} className="hover:text-gray-300">
+          <Link key={link.href} href={link.href} className="hover:bg-secondary hover:text-primary rounded-md p-2 text-neutral">
             {link.label}
           </Link>
         ))}

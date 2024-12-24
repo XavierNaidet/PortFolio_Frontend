@@ -21,14 +21,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, images, projectName, tech
 
   return (
     <div
-      className="bg-white rounded-lg shadow-md h-full w-full"
+      className="bg-neutral rounded-lg shadow-md h-full w-full"
     >
       <div className="relative w-full h-3/4">
         <Image src={images[0]} alt={projectName} layout="fill" objectFit="fit" 
         className="rounded-t-lg"/>
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-bold text-gray-800">{projectName}</h3>
+        <h3 className="text-lg font-bold text-primary">{projectName}</h3>
         <div className="flex flex-row items-center justify-between">
           <Technologies technologies={technologies} size={30} />
           <Tooltip text="Plus de détails">

@@ -9,8 +9,8 @@ import ContactPage from './contact/page';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="container space-y-4">
-      <div className="bg-gray-100 text-gray-800 p-6 rounded-md">
+    <div className="container space-y-8">
+      <div className="bg-neutral-variant text-neutral p-6 rounded-md">
         {/* Header Section */}
         <header className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-8 lg:gap-16 my-12">
           {/* Photo + Name */}
@@ -20,36 +20,35 @@ const HomePage: React.FC = () => {
               alt="Photo de Xavier"
               width={150}
               height={150}
-              className="rounded-full bg-black"
+              className="rounded-full bg-primary shadow-lg"
             />
-            <p className="text-center text-xl font-semibold text-gray-800 mt-4">
+            <p className="text-xl font-semibold text-secondary mt-4">
               Xavier
             </p>
           </div>
 
           {/* Title */}
           <div className="text-center lg:text-left lg:flex lg:flex-col lg:justify-center">
-            <h1 className="text-4xl font-bold text-gray-900 leading-snug">
+            <h1 className="text-4xl font-bold text-secondary leading-snug">
               Développeur Web / Web Mobile<br />
-              <span className="text-blue-500">&</span> <br />
+              <span className="text-tertiary">&</span> <br />
               Créateur de Solutions Modernes
             </h1>
           </div>
         </header>
-
-        {/* Footer Section */}
-        <footer className="text-center mt-12">
-          <p className="text-gray-600 mt-4">
-            Toujours prêt à relever de nouveaux défis.
-          </p>
-        </footer>
 
       </div>
       <AboutPage/>
       <SkillsPage/>
       <ProjectsPage/>
       <ContactPage/>
-      <div className='h-2'></div>
+
+      {/* Footer */}
+      <footer className="text-center mt-12">
+        <p className="text-neutral mt-4">
+          Toujours prêt à relever de nouveaux défis.
+        </p>
+      </footer>
     </div>
   );
 };

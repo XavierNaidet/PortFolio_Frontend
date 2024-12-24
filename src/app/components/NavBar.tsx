@@ -5,7 +5,7 @@ import { NavLinks } from "@/app/components";
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="fixed z-20 w-full bg-gray-900 text-white px-6 py-1 flex h-28">
+    <nav className="fixed z-20 w-full bg-primary text-white px-6 py-1 flex h-28">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl font-bold">

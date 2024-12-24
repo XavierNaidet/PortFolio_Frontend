@@ -9,8 +9,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#336D85", // Bleu pétrole
+        secondary: "#5C9EAD", // Bleu clair doux
+        tertiary: "#F3A712", // Jaune ocre
+        error: '#D72638',
+        neutral: {
+          DEFAULT: "#F4F8FB", // Blanc cassé
+          variant: "#E1E9F1", // Gris bleu clair
+        },
+        "neutral-dark": {
+          DEFAULT: "#1B2B34", // Bleu gris foncé
+          variant: "#243B47", // Gris ardoise foncé
+        },
       },
     },
   },

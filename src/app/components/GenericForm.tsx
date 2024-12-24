@@ -21,12 +21,14 @@ const GenericForm: React.FC<FormProps> = ({ title, fields, onSubmit }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 w-full lg:w-1/2">
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+    <div className="bg-neutral rounded-lg shadow-md p-6 w-full lg:w-1/2">
+      <h2 className="text-2xl font-bold mb-4 text-primary">
+        {title}
+      </h2>
       <form onSubmit={handleSubmit}>
         {fields.map((field) => (
           <div key={field.name} className="mb-4">
-            <label htmlFor={field.name} className="block text-gray-700 font-medium">
+            <label htmlFor={field.name} className="block text-secondary font-medium">
               {field.placeholder}
             </label>
             <FormField
@@ -43,8 +45,8 @@ const GenericForm: React.FC<FormProps> = ({ title, fields, onSubmit }) => {
           type="submit"
           className={`w-full py-2 rounded-lg transition 
             ${ isValidForm()
-              ? "bg-blue-500 text-white hover:bg-blue-600"
-              : "bg-gray-300 text-gray-500 cursor-not-allowed"
+              ? "bg-primary text-neutral hover:bg-secondary"
+              : "bg-neutral-variant text-secondary cursor-not-allowed"
             }`}
           disabled={!isValidForm()}
         >

@@ -26,10 +26,10 @@ const FormField: React.FC<FormFieldProps> = ({
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className={`w-full px-4 py-2 mt-1 border rounded-lg ${
-            !isValid ? "border-red-500" : "border-gray-300"
+          className={`w-full px-4 py-2 mt-1 border rounded-lg bg-neutral text-secondary ${
+            !isValid ? "border-error" : "border-neutral-variant"
           } focus:outline-none focus:ring-2 ${
-            !isValid ? "focus:ring-red-500" : "focus:ring-blue-500"
+            !isValid ? "focus:ring-error" : "focus:ring-primary"
           }`}
         />
       ) : (
@@ -40,10 +40,10 @@ const FormField: React.FC<FormFieldProps> = ({
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className={`w-full px-4 py-2 mt-1 border rounded-lg ${
-            !isValid ? "border-red-500" : "border-gray-300"
+          className={`w-full px-4 py-2 mt-1 border rounded-lg bg-neutral text-secondary ${
+            !isValid ? "border-error" : "border-neutral-variant"
           } focus:outline-none focus:ring-2 ${
-            !isValid ? "focus:ring-red-500" : "focus:ring-blue-500"
+            !isValid ? "focus:ring-error" : "focus:ring-primary"
           }`}
         />
       )}

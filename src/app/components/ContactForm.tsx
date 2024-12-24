@@ -30,7 +30,13 @@ const ContactForm: React.FC = () => {
     console.log("Form Data Submitted:", data);
   };
 
-  return <GenericForm title="Contactez-moi" fields={contactFields} onSubmit={handleSubmit} />;
+  return (
+    <GenericForm 
+      title="Contactez-moi" 
+      fields={contactFields} 
+      onSubmit={handleSubmit}
+    />
+  );
 };
 
 export { ContactForm };

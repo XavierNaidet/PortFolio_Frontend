@@ -4,7 +4,8 @@ import { mediaLinks } from "@/models";
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="container bg-gray-100 p-6 rounded-md w-full h-auto  mb-4 mx-auto flex flex-col md:flex-row items-center md:items-start justify-between md:justify-center space-y-6 md:space-y-0">
+    <div className="container bg-neutral text-primary p-6 rounded-md w-full h-auto mb-4 mx-auto flex flex-col items-center justify-between  space-y-6 
+      md:flex-row md:items-start md:justify-center md:space-y-0">
       {/* Formulaire de contact */}
       <ContactForm />
 
@@ -18,7 +19,6 @@ const ContactPage: React.FC = () => {
               name={link.name}
               href={link.href}
               icon={link.icon}
-              colorClass={link.colorClass}
             />
           ))}
         </div>
