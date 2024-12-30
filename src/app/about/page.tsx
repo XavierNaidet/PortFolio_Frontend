@@ -4,11 +4,11 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="container bg-neutral text-primary p-6 rounded-md">
+    <div className="container bg-surfaceContainerLow text-primary p-6 rounded-md">
       <h1 className="text-3xl font-bold text-center mb-8">A propos de Moi</h1>
       
       {/* Who Am I Section */}
-      <section className="bg-neutral-variant rounded-lg shadow-md p-8 mb-12">
+      <section className="bg-surfaceContainerHigh rounded-lg shadow-md p-8 mb-12">
         <h2 className="text-2xl font-bold text-primary mb-4">Qui suis-je ?</h2>
         <p className="text-secondary leading-7">
           Après plusieurs années dans le support informatique où j'ai toujours mis mes compétences de développeur 
@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Why Me Section */}
-      <section className="bg-neutral-variant rounded-lg shadow-md p-8">
+      <section className="bg-surfaceContainerHigh rounded-lg shadow-md p-8">
         <h2 className="text-2xl font-bold text-primary mb-4">Pourquoi me choisir ?</h2>
         <p className="text-secondary leading-7">
           Mon expérience unique en support informatique combinée à mes compétences en développement web 

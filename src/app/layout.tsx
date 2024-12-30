@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full h-full">
+    <html lang="en" className="w-full h-full light-theme">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-full h-full mb-4 bg-neutral text-gray-800`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-full h-full mb-4 bg-background text-onBackground`}
       >
         <NavBar />
         <main className="flex h-auto mt-28 p-6">

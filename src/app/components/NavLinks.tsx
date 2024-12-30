@@ -27,7 +27,7 @@ const NavLinks: React.FC = () => {
       <div
         ref={drawerRef}
         className={`
-          absolute right-0 top-full mt-2 w-48 bg-primary text-neutral-variant border-secondary border shadow-lg z-50 rounded-md overflow-hidden transform transition-all duration-300
+          absolute right-0 top-full mt-2 w-48 bg-secondaryFixed text-onSecondaryFixed shadow-lg z-50 rounded-md overflow-hidden transform transition-all duration-300
           ${isDrawerOpen 
             ? "translate-y-2 opacity-100 pointer-events-auto"
             : "translate-y-[-10px] opacity-0 pointer-events-none"
@@ -41,7 +41,7 @@ const NavLinks: React.FC = () => {
               key={link.href}
               href={link.href}
               onClick={toggleDrawer}
-              className="hover:bg-secondary hover:text-primary rounded-md p-2 text-neutral"
+              className="hover:bg-primaryFixedDim hover:text-onPrimaryFixedDim rounded-md p-2"
             >
               {link.label}
             </Link>
@@ -52,7 +52,7 @@ const NavLinks: React.FC = () => {
       {/* Navigation links for larger screens */}
       <div className="hidden sm:flex space-x-4">
         {navigationLinks.map((link) => (
-          <Link key={link.href} href={link.href} className="hover:bg-secondary hover:text-primary rounded-md p-2 text-neutral">
+          <Link key={link.href} href={link.href} className="hover:bg-primaryFixedDim hover:text-onPrimaryFixedDim rounded-md p-2">
             {link.label}
           </Link>
         ))}

@@ -9,18 +9,55 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#336D85", // Bleu pétrole
-        secondary: "#5C9EAD", // Bleu clair doux
-        tertiary: "#0C253A", // Jaune ocre
-        error: '#D72638',
-        neutral: {
-          DEFAULT: "#F4F8FB", // Blanc cassé
-          variant: "#E1E9F1", // Gris bleu clair
-        },
-        "neutral-dark": {
-          DEFAULT: "#1B2B34", // Bleu gris foncé
-          variant: "#243B47", // Gris ardoise foncé
-        },
+        primary: 'var(--primary)',
+        surfaceTint: 'var(--surface-tint)',
+        onPrimary: 'var(--on-primary)',
+        primaryContainer: 'var(--primary-container)',
+        onPrimaryContainer: 'var(--on-primary-container)',
+        secondary: 'var(--secondary)',
+        onSecondary: 'var(--on-secondary)',
+        secondaryContainer: 'var(--secondary-container)',
+        onSecondaryContainer: 'var(--on-secondary-container)',
+        tertiary: 'var(--tertiary)',
+        onTertiary: 'var(--on-tertiary)',
+        tertiaryContainer: 'var(--tertiary-container)',
+        onTertiaryContainer: 'var(--on-tertiary-container)',
+        error: 'var(--error)',
+        onError: 'var(--on-error)',
+        errorContainer: 'var(--error-container)',
+        onErrorContainer: 'var(--on-error-container)',
+        background: 'var(--background)',
+        onBackground: 'var(--on-background)',
+        surface: 'var(--surface)',
+        onSurface: 'var(--on-surface)',
+        surfaceVariant: 'var(--surface-variant)',
+        onSurfaceVariant: 'var(--on-surface-variant)',
+        outline: 'var(--outline)',
+        outlineVariant: 'var(--outline-variant)',
+        shadow: 'var(--shadow)',
+        scrim: 'var(--scrim)',
+        inverseSurface: 'var(--inverse-surface)',
+        inverseOnSurface: 'var(--inverse-on-surface)',
+        inversePrimary: 'var(--inverse-primary)',
+        primaryFixed: 'var(--primary-fixed)',
+        onPrimaryFixed: 'var(--on-primary-fixed)',
+        primaryFixedDim: 'var(--primary-fixed-dim)',
+        onPrimaryFixedVariant: 'var(--on-primary-fixed-variant)',
+        secondaryFixed: 'var(--secondary-fixed)',
+        onSecondaryFixed: 'var(--on-secondary-fixed)',
+        secondaryFixedDim: 'var(--secondary-fixed-dim)',
+        onSecondaryFixedVariant: 'var(--on-secondary-fixed-variant)',
+        tertiaryFixed: 'var(--tertiary-fixed)',
+        onTertiaryFixed: 'var(--on-tertiary-fixed)',
+        tertiaryFixedDim: 'var(--tertiary-fixed-dim)',
+        onTertiaryFixedVariant: 'var(--on-tertiary-fixed-variant)',
+        surfaceDim: 'var(--surface-dim)',
+        surfaceBright: 'var(--surface-bright)',
+        surfaceContainerLowest: 'var(--surface-container-lowest)',
+        surfaceContainerLow: 'var(--surface-container-low)',
+        surfaceContainer: 'var(--surface-container)',
+        surfaceContainerHigh: 'var(--surface-container-high)',
+        surfaceContainerHighest: 'var(--surface-container-highest)',
       },
     },
   },

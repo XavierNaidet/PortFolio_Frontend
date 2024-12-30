@@ -8,7 +8,7 @@ interface SkillCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
-    <div className="bg-neutral text-primary shadow-md rounded-lg p-3 flex items-center space-x-4">
+    <div className="bg-secondaryContainer text-onSecondaryContainer shadow-md rounded-lg p-3 flex items-center space-x-4">
       {skill.icon && (
         <Image
           src={`/logos/color/${skill.icon}`}
@@ -21,9 +21,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
       <div className="flex-1">
         <h2 className="text-lg font-medium">{skill.name}</h2>
         <div className="mt-2">
-          <div className="relative h-3 bg-neutral-variant rounded-full">
+          <div className="relative h-3 bg-secondaryFixedDim rounded-full">
             <div
-              className="absolute top-0 left-0 h-3 bg-primary rounded-full"
+              className="absolute top-0 left-0 h-3 bg-onSecondaryFixedVariant rounded-full"
               style={{ width: `${skill.level}%` }}
             ></div>
           </div>
