@@ -8,7 +8,7 @@ interface SkillCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
-    <div className="bg-secondaryContainer text-onSecondaryContainer shadow-md rounded-lg p-3 flex items-center space-x-4">
+    <div className="bg-secondaryContainer text-onSecondaryContainer shadow-md rounded-md p-3 flex items-center space-x-4">
       {skill.icon && (
         <Image
           src={`/logos/color/${skill.icon}`}

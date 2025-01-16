@@ -15,7 +15,7 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
   // Convert each child into a SwiperSlide
   const slides = React.Children.map(children, (child) => (
-    <SwiperSlide className="bg-neutral rounded-lg shadow-md">
+    <SwiperSlide className="p-2">
       {child}
     </SwiperSlide>
   ));
@@ -39,7 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
       breakpoints={{
         1024: { spaceBetween: 50, slidesPerView: 3, },
       }}
-      className="h-[85%] bg-neutral-variant"
+      className="h-[88%]"
     >
       {/* Render dynamically wrapped slides */}
       {slides}
