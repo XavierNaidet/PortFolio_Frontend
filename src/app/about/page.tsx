@@ -4,8 +4,8 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="container bg-surfaceContainerLow text-primary p-6 rounded-md">
-      <h1 className="text-3xl font-bold text-center mb-6">A propos de Moi</h1>
+    <div className="container ">
+      <h2 className="text-3xl font-bold text-center mb-6">A propos de Moi</h2>
       
       {/* Who Am I Section */}
       <section className="bg-surfaceContainerHigh rounded-md shadow-md p-8 mb-12">

@@ -15,7 +15,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     <div className="container bg-surfaceContainerLow text-primary px-6 py-4 rounded-md">
       {/* Nom du projet */}
       <div className="flex justify-center">
-        <h1 className="text-3xl font-bold mb-5">{project.projectName}</h1>
+        <h2 className="text-3xl font-bold mb-5">{project.projectName}</h2>
       </div>
 
       {/* Images Carrousel */}

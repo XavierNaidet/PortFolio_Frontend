@@ -10,8 +10,8 @@ import ContactPage from './contact/page';
 const HomePage: React.FC = () => {
   return (
     <div className="container space-y-8">
-      <div className="bg-surfaceContainerLow text-primary p-6 rounded-md">
-        {/* Header Section */}
+      {/* Header Section */}
+      <div id="header" className="bg-surfaceContainerLow text-primary p-6 rounded-md">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-8 lg:gap-16 my-12">
           {/* Photo + Name */}
           <div className="flex flex-col items-center lg:items-center flex-shrink-0">
@@ -38,13 +38,24 @@ const HomePage: React.FC = () => {
         </div>
 
       </div>
-      <AboutPage/>
-      <SkillsPage/>
-      <ProjectsPage/>
-      <ContactPage/>
+      <section id="about" className="scroll-mt-24 bg-surfaceContainerLow text-primary p-6 rounded-md">
+        <AboutPage />
+      </section>
+
+      <section id="skills" className="scroll-mt-24 bg-surfaceContainerLow text-primary p-6 rounded-md">
+        <SkillsPage />
+      </section>
+
+      <section id="projects" className="scroll-mt-24 bg-surfaceContainerLow text-primary p-6 rounded-md">
+        <ProjectsPage />
+      </section>
+
+      <section id="contact" className="scroll-mt-24 bg-surfaceContainerLow text-primary p-6 rounded-md">
+        <ContactPage />
+      </section>
 
       {/* Footer */}
-      <footer className="text-center p-4">
+      <footer className="text-center bg-surfaceContainerLow text-primary p-6 rounded-md">
         <p className="text-outline">
           Toujours prêt à relever de nouveaux défis.
         </p>

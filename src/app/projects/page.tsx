@@ -5,7 +5,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="container bg-surfaceContainerLow text-primary h-[75svh] p-6 rounded-md">
-      <h1 className="text-3xl font-bold text-center mb-6">Mes projets</h1>
+      <h2 className="text-3xl font-bold text-center mb-6">Mes projets</h2>
       <Carousel>
         {projects.map((project) => (
             <ProjectCard

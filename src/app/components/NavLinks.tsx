@@ -52,7 +52,11 @@ const NavLinks: React.FC = () => {
       {/* Navigation links for larger screens */}
       <div className="hidden sm:flex space-x-4">
         {navigationLinks.map((link) => (
-          <Link key={link.href} href={link.href} className="hover:bg-primaryFixedDim hover:text-onPrimaryFixedDim rounded-md p-2">
+          <Link
+            key={link.href}
+            href={link.href}
+            className="hover:bg-primaryFixedDim hover:text-onPrimaryFixedDim rounded-md p-2"
+          >
             {link.label}
           </Link>
         ))}

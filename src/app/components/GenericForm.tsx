@@ -21,8 +21,8 @@ const GenericForm: React.FC<FormProps> = ({ title, fields, onSubmit }) => {
   };
 
   return (
-    <div className="bg-neutral rounded-md shadow-md p-6 w-full lg:w-1/2">
-      <h2 className="text-2xl font-bold mb-4 text-primary">
+    <div className="bg-secondaryContainer text-onSecondaryContainer rounded-md shadow-md p-6 w-full lg:w-1/2">
+      <h2 className="text-2xl font-bold mb-4 text-primary text-center md:text-left">
         {title}
       </h2>
       <form onSubmit={handleSubmit}>
@@ -43,10 +43,10 @@ const GenericForm: React.FC<FormProps> = ({ title, fields, onSubmit }) => {
         ))}
         <button
           type="submit"
-          className={`w-full py-2 rounded-md transition 
+          className={`w-full py-2 rounded-md transition font-bold
             ${ isValidForm()
-              ? "bg-primary text-neutral hover:bg-secondary"
-              : "bg-neutral-variant text-secondary cursor-not-allowed"
+              ? "bg-primaryFixedDim text-onPrimaryFixedVariant hover:text-onPrimary hover:bg-primary"
+              : "bg-surfaceDim text-secondary cursor-not-allowed"
             }`}
           disabled={!isValidForm()}
         >
