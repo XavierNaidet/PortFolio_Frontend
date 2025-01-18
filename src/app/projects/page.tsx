@@ -4,7 +4,7 @@ import { projects } from "@/models";
 export default function ProjectsPage() {
 
   return (
-    <div className="container bg-surfaceContainerLow text-primary h-[75svh] p-6 rounded-md">
+    <div className="container h-[75svh] rounded-md">
       <h2 className="text-3xl font-bold text-center mb-6">Mes projets</h2>
       <Carousel>
         {projects.map((project) => (

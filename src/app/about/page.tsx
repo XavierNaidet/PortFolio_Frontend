@@ -4,7 +4,7 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="container ">
+    <div className="container">
       <h2 className="text-3xl font-bold text-center mb-6">A propos de Moi</h2>
       
       {/* Who Am I Section */}

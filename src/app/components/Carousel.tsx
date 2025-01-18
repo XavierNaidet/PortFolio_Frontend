@@ -37,7 +37,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }: CarouselProps) => {
         slideShadows: true,
       }}
       breakpoints={{
-        1024: { spaceBetween: 50, slidesPerView: 3, },
+        728: { spaceBetween: 50, slidesPerView: 1.5, },
       }}
       className="h-[88%]"
     >

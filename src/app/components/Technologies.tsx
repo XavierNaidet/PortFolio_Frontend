@@ -17,6 +17,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies , size = 32 })
             width={size}
             height={size}
             aria-label={tech.name}
+            className="max-w-[1.6rem] md:max-w-full"
           />
         </Tooltip>
       ))}
