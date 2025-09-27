@@ -21,9 +21,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
       <div className="flex-1">
         <h2 className="text-lg font-medium">{skill.name}</h2>
         <div className="mt-2">
-          <div className="relative h-3 bg-secondaryFixedDim rounded-full">
+          <div className="relative h-3 bg-secondaryContainer rounded-full">
             <div
-              className="absolute top-0 left-0 h-3 bg-onSecondaryFixedVariant rounded-full"
+              className="absolute top-0 left-0 h-3 bg-primary rounded-full"
               style={{ width: `${skill.level}%` }}
             ></div>
           </div>

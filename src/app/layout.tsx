@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full h-full light-theme">
+    <html lang="en" className="w-full h-ful light-theme">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-full h-full mb-4 bg-background text-onBackground`}
       >

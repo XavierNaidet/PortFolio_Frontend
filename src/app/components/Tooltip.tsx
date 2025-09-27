@@ -13,7 +13,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children }: TooltipProps) => {
 
       {/* Tooltip */}
       <div
-        className="bg-primaryFixedDim text-onPrimaryFixedDim  whitespace-nowrap absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 text-sm px-2 py-1 rounded transition-all duration-300 ease-in-out"
+        className="bg-inverse-surface text-inverse-on-surface  whitespace-nowrap absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 text-sm px-2 py-1 rounded transition-all duration-300 ease-in-out"
         role="tooltip" // Accessibilité
       >
         {text}
