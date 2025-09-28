@@ -39,5 +39,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# models
-src/models/
+# models local (private Data)
+/src/models/*.local.ts
+
+# project images
+/public/images/project1/
