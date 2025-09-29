@@ -3,7 +3,7 @@ type Technology = {
   icon: string; // Path to the technology icon
 };
 
-export interface Project {
+export interface ProjectProps {
   id: string; // Unique identifier for the project
   projectName: string; // Name of the project
   description: string; // Description of the project
@@ -13,7 +13,7 @@ export interface Project {
   liveSite: string; // Link to the live site (can be an empty string if not available)
 };
 
-export const projects: Project[] = [
+export const projects: ProjectProps[] = [
   {
     id: "Project1Id",
     projectName: "Project1Name",

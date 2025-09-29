@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { MediaLinkProps } from "@/models";
+import { MediatProps } from "@/models";
 
 
-const MediaLink: React.FC<MediaLinkProps> = ({ name, href, icon }) => {
+const MediatLink: React.FC<MediatProps> = ({ name, href, icon }) => {
+
   return (
     <a
       href={href}
@@ -17,4 +18,4 @@ const MediaLink: React.FC<MediaLinkProps> = ({ name, href, icon }) => {
   );
 };
 
-export { MediaLink };
+export { MediatLink };

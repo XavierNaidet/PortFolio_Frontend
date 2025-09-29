@@ -1,7 +1,10 @@
 import { Carousel, ProjectCard } from "@/app/components";
-import { projects } from "@/models";
+import { useModel } from "@/hooks/useModel";
+import type { ProjectProps } from "@/models";
 
 export default function ProjectsPage() {
+  const projects = useModel<ProjectProps[]>("projects");
+  if (!projects) return <p>Chargement des projets...</p>;
 
   return (
     <div className="container h-[75svh] rounded-md">

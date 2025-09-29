@@ -1,10 +1,10 @@
-export type MediaLinkProps = {
+export type MediatProps = {
   name: string;
   href: string;
   icon: string; // Path to the icon
 };
 
-export const mediaLinks : MediaLinkProps[] = [
+export const mediats : MediatProps[] = [
   {
     name: "GitHub",
     href: "https://github.com/YourGithubName",

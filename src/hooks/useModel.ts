@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { modelLoaders } from "@/models/index";
 
 export function useModel<T>(modelName: string): T | null {
   const [data, setData] = useState<T | null>(null);
@@ -8,21 +9,27 @@ export function useModel<T>(modelName: string): T | null {
 
     const loadModel = async () => {
       try {
-        // Try import local file (ex: models/skills.local.ts)
-        const localModule = await import(`../models/${modelName}.local.ts`);
-        if (mounted) {
-          setData(localModule.default ?? localModule[modelName]);
+        const localModelKey = `${modelName}.local`;
+
+        if (modelLoaders[localModelKey]) {
+          const localModule = await modelLoaders[localModelKey]();
+          if (mounted) {
+            setData(localModule.default ?? localModule[modelName]);
+            return;
+          }
         }
-      } catch (error) {
-        try {
-          // Else import oublic file (ex: models/skills.ts)
-          const publicModule = await import(`../models/${modelName}.ts`);
+
+        if (modelLoaders[modelName]) {
+          const publicModule = await modelLoaders[modelName]();
           if (mounted) {
             setData(publicModule.default ?? publicModule[modelName]);
+            return;
           }
-        } catch (err) {
-          console.error(`Erreur lors du chargement du modèle "${modelName}"`, err);
         }
+
+        console.error(`Modèle "${modelName}" introuvable.`);
+      } catch (error) {
+        console.error(`Erreur lors du chargement du modèle "${modelName}"`, error);
       }
     };
 

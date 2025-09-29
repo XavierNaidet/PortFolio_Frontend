@@ -1,10 +1,20 @@
 import { notFound } from "next/navigation";
-import { projects } from "@/models/projects";
+import type { ProjectProps } from "@/models";
 import Image from "next/image";
 import { Carousel, Technologies } from "@/app/components";
 
+async function loadProjects(): Promise<ProjectProps[]> {
+  try {
+    const localModule = await import("@/models/projects.local");
+    return localModule.projects;
+  } catch {
+    const publicModule = await import("@/models/projects");
+    return publicModule.projects;
+  }
+}
 
 export default async function Page({ params }: { params: { id: string } }) {
+  const projects = await loadProjects();
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
@@ -13,19 +23,14 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <div className="container bg-surfaceContainerLow text-primary px-6 py-4 rounded-md">
-      {/* Nom du projet */}
       <div className="flex justify-center">
         <h2 className="text-3xl font-bold mb-5">{project.projectName}</h2>
       </div>
 
-      {/* Images Carrousel */}
       <div className="flex max-w-full">
         <Carousel>
           {project.images.map((image, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center"
-            >
+            <div key={index} className="flex items-center justify-center">
               <Image
                 src={image}
                 alt={`${project.projectName} image ${index + 1}`}
@@ -37,18 +42,13 @@ export default async function Page({ params }: { params: { id: string } }) {
           ))}
         </Carousel>
       </div>
-    
-      <div className="flex flex-col">
-        {/* Description */}
-        <p className="text-secondary">{project.description}</p>
-        
-        {/* Technologies */}
-        <Technologies technologies={project.technologies}/>
 
-        {/* Liens */}
+      <div className="flex flex-col">
+        <p className="text-secondary">{project.description}</p>
+        <Technologies technologies={project.technologies} />
+
         {(project.githubLink || project.liveSite) && (
           <div className="flex space-x-4 mt-4">
-            {/* Lien GitHub */}
             {project.githubLink && (
               <a
                 href={project.githubLink}
@@ -60,8 +60,6 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <span>GitHub</span>
               </a>
             )}
-
-            {/* Lien Site */}
             {project.liveSite && (
               <a
                 href={project.liveSite}
@@ -78,5 +76,4 @@ export default async function Page({ params }: { params: { id: string } }) {
       </div>
     </div>
   );
-
 }

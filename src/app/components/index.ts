@@ -2,7 +2,7 @@ export * from "@/app/components/NavBar";
 export * from "@/app/components/NavLinks";
 export * from "@/app/components/ProjectCard";
 export * from "@/app/components/SkillCard";
-export * from "@/app/components/MediaLink";
+export * from "@/app/components/MediatLink";
 export * from "@/app/components/FormField";
 export * from "@/app/components/ContactForm";
 export * from "@/app/components/GenericForm";

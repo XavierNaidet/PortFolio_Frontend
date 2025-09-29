@@ -1,10 +1,10 @@
 import React from "react";
 import { useModel } from "@/hooks/useModel";
-import type { Skill } from "@/models";
 import { SkillCard } from "@/app/components";
+import type { SkillProps } from "@/models";
 
 export default function SkillsPage() {
-  const skills = useModel<Skill[]>("skills");
+  const skills = useModel<SkillProps[]>("skills");
   if (!skills) return <p>Chargement des compétences...</p>;
 
   // Regrouper les compétences par catégories
